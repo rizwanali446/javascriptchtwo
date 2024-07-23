@@ -1,0 +1,64 @@
+# /*title.style.backgroundColor="green"
+# 'green'
+# title.style.borderRadius="15px"
+# '15px'
+# turnGreen.style.padding="10px"
+# VM5068:1 Uncaught ReferenceError: turnGreen is not defined
+#     at <anonymous>:1:1
+# (anonymous) @ VM5068:1Understand this error
+# document.querySelectorAll("li")
+# NodeList(3) [li, li, li]
+# const myul=document.querySelector("ul")*/
+# now querySelectorAll
+# /*
+# const templilist=document.querySelectorAll("li")
+# undefined
+# templilist
+# NodeList(3) [li, li, li]
+#  02
+# templilist[0].style.color="green"
+# 'green'
+# const myh1=document.querySelectorAll("h1")
+# undefined
+# myh1
+# NodeList [h1#title.head]
+# myh1[0].st
+# undefined
+# myh1[0].style.color="yellow"
+# 'yellow'
+# the abvoe code will work only due to nodelist with index[] and forEach() but not map otherwise not changes possible
+#  because of NodeList not an array  */
+# /*forEach()
+# const templilist=document.querySelectorAll("li")
+# undefined
+# templilist
+# NodeList(3) [li, li, li]
+# templilist.forEach(function (l) {
+# l.style.backgroundColor ="green"   
+# })  */
+#  03
+# to convert htmlCollection to Array and then apply forEach() func to change color
+# document.getElementsByClassName("list-item")
+# HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+# const mytempClass=document.getElementsByClassName("list-item")
+# undefined
+# mytempClass
+# HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+# Array.from(mytempClass)
+# (4) [li.list-item, li.list-item, li.list-item, li.list-item]0: li.list-item1: li.list-item2: li.list-item3: li.list-itemlength: 4[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+# const myconvertedArray=Array.from(mytempClass)
+# undefined
+# myconvertedArray
+# (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+# myconvertedArray.forEach(function (li) {
+#     li.style.color="orange"
+# })
+# #04 
+# const myh2=document.querySelectorAll(".mw-heading")
+# myh2
+# myh2.forEach(function (h){
+#     h.style.color="yellow"
+#     h.style.bacgroundColor="red"
+#     h.style.padding="10px"
+#     h.innerText="Rizwan"
+# })
