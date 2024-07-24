@@ -1,0 +1,14 @@
+ .button{
+    display: flex;
+  background-color: #fff;
+  padding: 15px 40px;
+  border-radius: 8px;
+  color: #212121;
+  text-decoration: none;
+  border: 2px solid #212121;
+}
+.canvas{
+    display: flex;
+    margin-top: 15px;
+    object-fit: cover;
+}
