@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>three advance dom</title>
+</head>
+<body style="background-color: rgb(134, 150, 165); color: aquamarine;">
+    
+</body>
+<script>
+  const div=  document.createElement('div')
+  console.log(div);
+  div.className="main"
+  div.id=Math.round(Math.random()*10+1)
+  div.setAttribute("title","generated title")
+  div.style.backgroundColor="orange"
+  div.style.padding="12px"
+//   div.innerText="janab text documet"
+  const addText=document.createTextNode("janab add document innerHtml")
+div.appendChild(addText)
+div.style.color="black"
+document.body.appendChild(div) // to show in ui
+</script>
+</html>
+<!-- ended 1,27 -->

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit and remove in dom</title>
+</head>
+<style>
+    
+</style>
+<body style="background-color: #212121; color: aquamarine;">
+    <ul class="lang">
+      <li>Javascript</li>
+    </ul>
+
+</body>
+
+<script>
+    //1st mehtod random approch to append but not easy in most li itms appending
+/*function addLang(langName){
+   const li= document.createElement('li')
+   li.innerHTML=`${langName}`
+   document.querySelector(".lang")
+   .appendChild(li)
+}
+addLang("Python")
+addLang("TypeScript")*/
+//2nd mthod optimized way mostly usd
+function optimizedLang(languageName){
+const li=document.createElement('li')
+li.appendChild(document.createTextNode(languageName))//<=optimezed way in one line code
+document.querySelector(".lang").appendChild(li)
+
+}
+optimizedLang("golang")
+optimizedLang("python")
+optimizedLang("Typescript")
+
+//Edit
+const secondLang=document.querySelector("li:nth-child(2)")
+//secondLang.innerHTML="swift"  <== not optimzed approach
+const newLi=document.createElement("li")
+newLi.textContent="swift"
+secondLang.replaceWith(newLi)
+//2nd method edit 
+const istLang=document.querySelector("li:first-child")
+istLang.outerHTML='<li>React.js</li>'
+//remove method
+const removeLastlang=document.querySelector("li:last-child")
+removeLastlang.remove()
+</script>
+</html>
+<!-- ended 1,47 -->

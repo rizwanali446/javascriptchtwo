@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom advance 1,00</title>
+</head>
+<body style="background-color: slategray; color: aquamarine;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wedensday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent=document.querySelector(".parent")
+//1st
+    //  console.log(parent);
+//  console.log(parent.children)
+//  console.log(parent.children[1].innerHTML);// gives htmlCollection and child Tuesday return
+//2nd
+/*for (let i = 0; i <parent.children.length; i++) {
+    console.log(parent.children[i].innerHTML);
+    }*/
+   //3rd
+    parent.children[2].style.color="yellow"
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+//4rth first child to parent and also day siblings nextone like Tuesday
+    /*const dayOne=document.querySelector(".day")
+console.log(dayOne.parentElement);
+console.log(dayOne.nextElementSibling);*/
+//5th
+console.log("NODES: ",parent.childNodes);
+
+
+
+</script>
+</html>
+<!-- //ended 1,17 -->
